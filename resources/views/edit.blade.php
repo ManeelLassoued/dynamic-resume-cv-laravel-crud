@@ -48,8 +48,14 @@
                                         <div class="col-12">
                                             <h2 class="fw-bold text-secondary">Personal Information</h2>
                                             <div class="form-outline mb-4">
+<<<<<<< HEAD
                                                 <input type="hidden" id="user_id" name="user_id" class="form-control"
                                                     value="{{ isset($information['personal_info']['id']) ? $information['personal_info']['id'] : '' }}" />
+=======
+                                                <input type="hidden" id="personal_information_id" name="personal_information_id" class="form-control"
+                                                    value="{{ isset($information['personal_info']['id']) ? $information['personal_info']['id'] : '' }}" />
+
+>>>>>>> test2025
                                             </div>
                                             <div class="row mb-4">
                                                 <div class="col-12">

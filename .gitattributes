@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * text=auto
 
 *.blade.php diff=html
@@ -9,3 +10,28 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+=======
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted to native line endings
+*.php text
+*.js text
+*.css text
+*.html text
+*.json text
+*.yml text
+*.scss text
+*.less text
+*.md text
+
+# Declare files that should always retain CRLF line endings
+*.bat text eol=crlf
+
+# Denote files that are binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+>>>>>>> test2025

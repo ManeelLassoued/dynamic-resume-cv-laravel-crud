@@ -8,8 +8,6 @@
                     <h1 class="m-0">Manage User Profiles</h1>
                 </div>
                 <div class="col-4 text-right">
-<<<<<<< HEAD
-=======
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
                         @csrf
@@ -19,20 +17,12 @@
                         </button>
                     </form>
 
->>>>>>> test2025
-                    <a href="{{ route('user.profile.create') }}" class="add-btn">
-                        <i class="fa fa-user-plus"></i>
-                        <br> Add New
-                    </a>
-<<<<<<< HEAD
-                </div>
-=======
+
 
 
                 </div>
 
 
->>>>>>> test2025
             </div>
             <div class="row mb-2">
                 <div class="col-sm-12">
@@ -66,10 +56,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-<<<<<<< HEAD
-=======
                              @if (!empty($users_data))
->>>>>>> test2025
                                 @php
                                     $count = 1;
                                 @endphp
@@ -83,18 +70,6 @@
                                         <td>{{ $user['personal_info']['profile_title'] }}</td>
                                         <td>{{ $user['personal_info']['first_name'] }}</td>
                                         <td>{{ $user['personal_info']['last_name'] }}</td>
-<<<<<<< HEAD
-                                        <td>{{ $user['contact_info']['email'] }}</td>
-                                        <td align="center">
-                                            <div class="d-flex flex-row justify-content-around">
-                                                <a class="view_btn"
-                                                    href="{{ route('user.profile.view', $user['personal_info']['id']) }}"
-                                                    title="View Profile">
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
-                                                <a class="edit_btn"
-                                                    href="{{ route('edit', $user['personal_info']['id']) }}"
-=======
 
                                         <td>@if(isset($user['contact_info']['email']))
                                             {{ $user['contact_info']['email'] }}
@@ -105,25 +80,13 @@
                                         <td align="center">
                                             <div class="d-flex flex-row justify-content-around">
                                                 <a class="view_btn"
-                                                href="{{ route('user.profile.view', ['id' => $user['personal_info']['id'], 'user_id' => $user['personal_info']['user_id']]) }}"
+                                                href="{{ route('admin.view', $user['personal_info']['id']) }}"
                                                 title="View Profile">
                                                 <i class="fas fa-eye"></i>
-                                             </a>
+                                            </a>
 
-                                                <a class="edit_btn"
-                                                    href="{{ route('edit', ['id' => $user['personal_info']['id'], 'user_id' => $user['personal_info']['user_id']]) }}"
->>>>>>> test2025
-                                                    title="Edit Profile">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                                <form action="{{ route('destroy', $user['personal_info']['id']) }}"
-                                                    method="post" class="d-inline">
-                                                    @csrf
-                                                    <a href="javascript::void(0)" onclick="confirm_form_delete(this)"
-                                                        class="del_btn" title="Delete Profile">
-                                                        <i class="fas fa-user-minus text-danger"></i>
-                                                    </a>
-                                                </form>
+
+
                                             </div>
                                         </td>
                                     </tr>
@@ -131,12 +94,9 @@
                                         $count++;
                                     @endphp
                                 @endforeach
-<<<<<<< HEAD
-=======
                             @else
                             <p>No user data available.</p>
                             @endif
->>>>>>> test2025
                             </tbody>
                             <tfoot>
                                 <tr>
